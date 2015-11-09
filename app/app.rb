@@ -1,12 +1,14 @@
 ENV["RACK_ENV"] ||= "development"
 
 require 'sinatra/base'
+require 'sinatra/flash'
 require_relative 'data_mapper_setup'
 
 class Chitter < Sinatra::Base
 
   enable :sessions
   set :session_secret, 'Super secret!'
+  register Sinatra::Flash
 
   get '/' do
     erb :'/index'
@@ -30,6 +32,7 @@ class Chitter < Sinatra::Base
   end
 
   post '/sessions' do
+    p params
     user = User.authenticate(params[:email], params[:password])
       if user
         session[:user_id] = user.id

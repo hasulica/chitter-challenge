@@ -14,5 +14,6 @@ group :test do
   gem "selenium-webdriver"
   gem "rspec-sinatra"
   gem "database_cleaner"
+  gem 'sinatra-flash'
   gem 'coveralls', require: false
 end
