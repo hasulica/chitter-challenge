@@ -6,6 +6,13 @@ group :test do
   gem 'cucumber'
   gem 'rubocop-rspec'
   gem 'rubocop'
+  gem 'bcrypt'
+  gem 'sinatra'
+  gem "data_mapper"
+  gem "dm-postgres-adapter"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "rspec-sinatra"
+  gem "database_cleaner"
   gem 'coveralls', require: false
 end
-

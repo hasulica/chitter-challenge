@@ -7,8 +7,8 @@ feature 'signing up new user' do
     fill_in :name, with: 'Radu'
     fill_in :email, with: 'radu@radu.com'
     fill_in :password, with: 'password'
-    fill_in :password_confirmation, with: 'radu@radu.com'
+    #fill_in :password_confirmation, with: 'radu@radu.com'
     click_button('Sign Up')
-    expect(page).to have_content('Welcome Radu!')
+    expect(page).to have_content('Welcome, Radu!')
     end
 end
