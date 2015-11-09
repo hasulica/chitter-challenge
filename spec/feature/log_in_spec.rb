@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature 'log in' do
   scenario 'log in when already signed up' do
-    visit('/')
     sign_up
     click_button('Log In')
     fill_in :name, with: 'Radu'
